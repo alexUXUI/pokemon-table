@@ -2,7 +2,7 @@
 
 Imagine you just joined a new dev team and one of your teammates wants to merge in a PR that adds a resuable table to the codebase. Your task is to review this PR as you normally would.
 
-Assume that this code will go out to production after your review. Take into consideration that this code needs to meet enterprise standards in terms of how well it scales, how accessible it is, how resiliant to errors it is, how it behaves, and how it looks. Ask yourself, what would you change abut this PR knowing that this code is going out to 10 million people?  
+Assume that this code will go out to production after your review. Take into consideration that this code needs to meet enterprise standards in terms of how well it scales, how accessible it is, how resiliant to errors it is, how it behaves, and how it looks. What would you change about this PR knowing that this code is going out to 10 million people?  
 
 It is up to you to find and raise any and all concerns you may have with this PR. Everything here is fair game, from large refactors to tiny nit-picks, even style improvements are welcome. Nothing is off limits, consider as many edge cases as you think is appropriate. Whatever you think is important to change / conciosuly consider going forward is exactly what we want to hear.  
 
