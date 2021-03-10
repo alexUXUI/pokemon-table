@@ -1,3 +1,33 @@
+# PR Exercise
+
+Imagine you just joined a new dev team and one of your teammates wants to merge in a PR that adds a resuable table to the codebase. Your task is to review this PR as you normally would.
+
+Assume that this code will go out to production after your review. Take into consideration that this code needs to meet enterprise standards in terms of how well it scales, how accessible it is, how resiliant to errors it is, how it behaves, and how it looks. Ask yourself, what would you change abut this PR knowing that this code is going out to 10 million people?  
+
+It is up to you to find and raise any and all concerns you may have with this PR. Everything here is fair game, from large refactors to tiny nit-picks, even style improvements are welcome. Nothing is off limits, consider as many edge cases as you think is appropriate. Whatever you think is important to change / conciosuly consider going forward is exactly what we want to hear.  
+
+In addition to the problems you find in this PR, we are also interested in learning how you communicate these change requests to other humans so please be your authentic self in your comments and assume someone will work with this feedback. 
+
+Developer Story:
+
+As a user, I need to see a table of pokemon so that I know their stats.
+
+The AC for this ticket:
+
+- Table should be accessible and usable
+- Table should scale well to handle *lots* of data
+- Table should be pleasant to look at
+- Table should be built in such a way that it can be reused 
+- Table should fail gracefully
+- Table should handle all possible states associated with it
+- Table should be extensible. We know that on the road map we have stories for adding:
+    - filtering
+    - pagination
+    - sorting
+
+
+-----
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
