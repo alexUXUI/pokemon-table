@@ -3,25 +3,18 @@ import { useTableData } from './Table.hooks'
 
 import { TableBody } from './Table-body.component'
 import { TableHeader } from './Table-headers.component'
-import { TableColumn } from './Table.types'
 
-export interface TableProps<Row, RowField extends keyof Row> {
-    id: number
-    data: Row[]
-    columns: TableColumn<Row, RowField>[]
-    indexColumn: string
-}
-
-export const Table = <Row, RowField extends keyof Row>({
+export const Table = ({
     id,
     data,
     columns,
-    indexColumn
-}: TableProps<Row, RowField>): JSX.Element => {
+    indexColumn,
+    isLoading
+}) => {
 
     const { tableData } = useTableData(data, indexColumn)
 
-    const [tableColumns] = useState<TableColumn<Row, RowField>[]>(columns)
+    const [tableColumns] = useState(columns)
 
     return (
         <table data-testid={`table-${id}`}>
@@ -32,6 +25,7 @@ export const Table = <Row, RowField extends keyof Row>({
             <TableBody
                 id={id}
                 tableData={tableData}
+                isLoading={isLoading}
             />
         </table>
     )

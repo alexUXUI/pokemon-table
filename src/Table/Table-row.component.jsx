@@ -1,25 +1,21 @@
 import { TableCell } from "./Table-cell.component"
 
-interface TableRowProps<Row> {
-    rowIndex: number,
-    tableRow: Row
-}
-
-export const TableRow = <Row,>({
+export const TableRow = ({
     rowIndex,
     tableRow,
-}: TableRowProps<Row>) => {
+}) => {
 
-    let tableRowValues = Object.values(tableRow as Row)
+    let tableRowValues = Object.values(tableRow)
 
     return (
         <tr key={rowIndex}>
             {
-                tableRowValues.map((tableCell: string | number, cellIndex: number): JSX.Element => {
+                tableRowValues.map((tableCell, cellIndex) => {
                     return (
                         <TableCell
                             cellIndex={cellIndex}
                             tableCell={tableCell}
+                            key={`${tableCell}-${cellIndex}`}
                         />
                     )
                 })
