@@ -1,5 +1,4 @@
 import { usePokemon } from './App.hook'
-import { Table } from '../Table/Table.component';
 import './App.css';
 
 export function App() {
@@ -12,7 +11,7 @@ export function App() {
 
   return (
     <div className="App">
-
+      Hello world 🌍
     </div>
   );
 }
