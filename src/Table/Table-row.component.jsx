@@ -8,14 +8,13 @@ export const TableRow = ({
     let tableRowValues = Object.values(tableRow)
 
     return (
-        <tr key={rowIndex}>
+        <tr>
             {
                 tableRowValues.map((tableCell, cellIndex) => {
                     return (
                         <TableCell
                             cellIndex={cellIndex}
                             tableCell={tableCell}
-                            key={`${tableCell}-${cellIndex}`}
                         />
                     )
                 })

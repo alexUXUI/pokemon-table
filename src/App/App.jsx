@@ -25,6 +25,9 @@ export function App() {
         isLoading={fetchingPokemonData}
         error={pokemonRequestError}
         id={0}
+        tableVariant="long-form"
+        tableStyle="relaxed"
+        tableHasError="false"
       />
     </div>
   );

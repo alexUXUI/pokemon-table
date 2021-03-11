@@ -5,13 +5,12 @@ export const useTableData = (
     indexColumn
 ) => {
 
-    const [tableData, setTableData] = useState({})
+    const [tableData, setTableData] = useState('default table state')
 
-    useEffect(() => {
+    useEffect(async () => {
 
         if (data) {
-            let indexedTableData = data.reduce((indexedData, tableRow) => {
-
+            let indexedTableData = await data.reduce((indexedData, tableRow) => {
 
                 let indexKey = tableRow[indexColumn]
 
